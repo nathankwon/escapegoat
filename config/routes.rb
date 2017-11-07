@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :escapes
   resources :photos
   devise_for :users
   resources :users, only: [:show, :index], controller: :profiles

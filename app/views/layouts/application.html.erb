@@ -10,6 +10,16 @@
 
   <body>
 
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <%= render 'devise/partials/logout' %> |
+        <%= link_to 'Home', root_path %> |
+        <%= link_to 'Photos', photos_path %> |
+        <%= link_to 'Profile', profiles_path %> |
+        <%= link_to 'Escape!', escapes_path %>
+      </form>
+    </nav>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

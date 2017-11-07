@@ -1,0 +1,47 @@
+<%= form_with(model: escape, local: true) do |form| %>
+  <% if escape.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(escape.errors.count, "error") %> prohibited this escape from being saved:</h2>
+
+      <ul>
+      <% escape.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :escape_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rescue_title %>
+    <%= form.text_area :rescue_title, id: :escape_rescue_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dollar_amount %>
+    <%= form.number_field :dollar_amount, id: :escape_dollar_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :escape_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :escape_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :requirements %>
+    <%= form.text_area :requirements, id: :escape_requirements %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Escape Requests</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">User</th>
+      <th scope="col">Rescue title</th>
+      <th scope="col">Dollar amount</th>
+      <th scope="col">Location</th>
+      <th scope="col">Description</th>
+      <th scope="col">Requirements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @escapes.each do |escape| %>
+      <tr>
+        <td><%= escape.user_id %></td>
+        <td><%= escape.rescue_title %></td>
+        <td><%= escape.dollar_amount %></td>
+        <td><%= escape.location %></td>
+        <td><%= escape.description %></td>
+        <td><%= escape.requirements %></td>
+        <td><%= link_to 'Show', escape %></td>
+        <td><%= link_to 'Edit', edit_escape_path(escape) %></td>
+        <td><%= link_to 'Destroy', escape, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Escape', new_escape_path %>

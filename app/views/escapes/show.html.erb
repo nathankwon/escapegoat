@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+
+  <strong>User:</strong>
+  <%= @escape.user_id %>
+  <br>
+
+  <strong>Rescue title:</strong>
+  <%= @escape.rescue_title %>
+  <br>
+  
+  <strong>Dollar amount:</strong>
+  <%= @escape.dollar_amount %>
+  <br>
+  
+  <strong>Location:</strong>
+  <%= @escape.location %>
+  <br>
+  
+  <strong>Description:</strong>
+  <%= @escape.description %>
+  <br>
+  
+  <strong>Requirements:</strong>
+  <%= @escape.requirements %>
+  <br>
+  
+<%= link_to 'Edit', edit_escape_path(@escape) %> |
+<%= link_to 'Back', escapes_path %>
