@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#Secure sensitive information in ENV
+gem "figaro"
 #image upload
 gem "shrine"
 gem "image_processing"
