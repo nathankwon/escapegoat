@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#Geocoding
+gem 'geocoder'
 #Secure sensitive information in ENV
 gem "figaro"
 #image upload

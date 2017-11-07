@@ -3,3 +3,7 @@ add bootstrap: https://github.com/twbs/bootstrap-rubygem
 rails g scaffold Profile image:text user_id:integer first_name:text last_name:text email:text
 add devise: https://github.com/plataformatec/devise
 add shrine: https://github.com/janko-m/shrine --> using this guide: https://code.tutsplus.com/tutorials/uploading-files-with-rails-and-shrine--cms-27596
+figaro: https://github.com/laserlemon/figaro
+rails g scaffold Escape user_id:integer rescue_title:text dollar_amount:decimal location:string description:text requirements:text
+geocoder: https://github.com/alexreisner/geocoder
+google maps api: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key
