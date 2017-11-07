@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :photos
   devise_for :users
+  resources :users, only: [:show, :index], controller: :profiles
+  
   resources :profiles
   root 'homepage#index'
 

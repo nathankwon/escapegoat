@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <form class="form-inline">
-    <button class="btn btn-outline-success" type="button">Main button</button>
-    <button class="btn btn-sm align-middle btn-outline-secondary" type="button">Smaller button</button>
+    <%= render 'devise/partials/logout' %> |
+    <%= link_to 'Photos', photos_path %> |
     <%= link_to 'Profile', profiles_path %>
   </form>
 </nav>

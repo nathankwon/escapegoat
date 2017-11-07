@@ -5,6 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#image upload
+gem "shrine"
+gem "image_processing"
+gem "mini_magick", ">= 4.3.5"
 #Authentication
 gem 'devise'
 #CSS styling
