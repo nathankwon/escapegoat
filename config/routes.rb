@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :index], controller: :profiles
   resources :charges
-  
+
+  resources :conversations, only: [:create] do
+    member do
+      post :close
+    end
+    resources :messages, only: [:create]
+  end
+
   resources :profiles
   root 'homepage#index'
 
