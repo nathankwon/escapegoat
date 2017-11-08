@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'inbox/index'
+
   resources :escapes
   resources :photos
   devise_for :users

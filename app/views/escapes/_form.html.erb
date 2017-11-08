@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :rescue_title %>
-    <%= form.text_area :rescue_title, id: :escape_rescue_title %>
+    <%= form.text_field :rescue_title, id: :escape_rescue_title %>
   </div>
 
   <div class="field">
     <%= form.label :dollar_amount %>
-    <%= form.number_field :dollar_amount, id: :escape_dollar_amount %>
+    <%= form.number_field :dollar_amount, id: :escape_dollar_amount, :step => 0.01 %>
   </div>
 
   <div class="field">

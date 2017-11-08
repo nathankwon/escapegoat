@@ -10,12 +10,29 @@ ul {
   list-style: none;
 }
 
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
 .messages-list {
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
 }
-
 
 .message-sent {
   position: relative;
@@ -26,11 +43,14 @@ ul {
   float: right;
 }
 
-
 .message-received {
   background-color: #F1F0F0;
   border-color: #EEEEEE;
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+
+.card-body {
+  text-align: center;
 }

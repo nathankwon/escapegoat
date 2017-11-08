@@ -14,16 +14,32 @@
 
   <body>
 
-    <nav class="navbar navbar-light bg-light">
-      <form class="form-inline">
-        <%= render 'devise/partials/logout' %> |
-        <%= link_to 'Home', root_path %> |
-        <%= link_to 'Photos', photos_path %> |
-        <%= link_to 'Profile', profiles_path %> |
-        <%= link_to 'Escape!', escapes_path %> |
-        <%= link_to 'Charges', new_charge_path %> |
-      </form>
-    </nav>
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><%= render 'devise/partials/logout' %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Home', root_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Photos', photos_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Profile', profiles_path %> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Escape!', escapes_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'New Escape', new_escape_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Charges', new_charge_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Inbox', inbox_index_path %></a>
+      </li>
+    </ul>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
