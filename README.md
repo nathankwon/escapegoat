@@ -7,3 +7,4 @@ figaro: https://github.com/laserlemon/figaro
 rails g scaffold Escape user_id:integer rescue_title:text dollar_amount:decimal location:string description:text requirements:text
 geocoder: https://github.com/alexreisner/geocoder
 google maps api: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key
+stripe: https://stripe.com/docs/checkout/rails
