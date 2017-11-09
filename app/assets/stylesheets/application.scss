@@ -1,5 +1,10 @@
 @import "bootstrap";
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .maps {
   width: 50%;
   height: 300px;
@@ -53,4 +58,32 @@ ul {
 
 .card-body {
   text-align: center;
+}
+
+.container-width {
+  margin: 1% 10%;
+  border-style: solid;
+  border-color: black;
+}
+
+.panel-heading {
+  text-align:center;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+.left-col {
+  border-left-style: dotted;
+  border-color: black;
+}
+
+.go-middle {
+  text-align: center;
+}
+
+.go-right {
+  text-align: right;
+  margin: 2% 5%;
 }

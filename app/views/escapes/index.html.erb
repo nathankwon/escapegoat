@@ -1,19 +1,29 @@
+<div class="go-right">
+  <%= form_tag(escapes_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
+
+<% if @escapes.blank? %>
+  <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+<% end %>
+
 <% @escapes.each do |escape| %>
   <div class="container">
     <div class="card" style="width: 100%;">
       <div class="card-body">
         <h4 class="card-title"><%= escape.rescue_title %></h4>
-        <h6 class="card-subtitle mb-2 text-muted">User: <%= escape.user_id %></h6>
-        <h6 class="card-subtitle mb-2">Money: $<%= escape.dollar_amount %></h6>
-        <h6 class="card-subtitle">Location: <%= escape.location %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Name: <%= escape.user.photo.full_name %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Amount: $<%= escape.dollar_amount %></h6>
+        <h6 class="card-subtitle text-muted">Location: <%= escape.location %></h6>
         <br>
         <h6>Description</h6>
         <p class="card-text"><%= escape.description %></p>
         <h6>Requirements</h6>
         <p class="card-text"><%= escape.requirements %></p>
         <a href="#" class="card-link"><%= link_to 'Show', escape %> | </a>
-        <a href="#" class="card-link"><%= link_to 'Edit', edit_escape_path(escape) %> | </a>
-        <a href="#" class="card-link"><%= link_to 'Destroy', escape, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+        <a href="#" class="card-link"><%= link_to 'Edit', edit_escape_path(escape) %> </a>
       </div>
     </div>
     <br>

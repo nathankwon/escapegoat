@@ -1,5 +1,5 @@
   <strong>User:</strong>
-  <%= @escape.user_id %>
+  <%= @escape.user.photo.full_name %>
   <br>
 
   <strong>Rescue title:</strong>
@@ -26,6 +26,7 @@
 
 <%= link_to 'Messsage Escapee', inbox_index_path %> |
 <%= link_to 'Pay', new_escape_charge_path(@escape) %> (only the poster should see this) |
+<%= link_to "Delete", @escape, :method => :delete, data: { confirm: 'Are you sure?' } %> (and this)
 
 
 <script async defer

@@ -17,23 +17,22 @@
 
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= render 'devise/partials/logout' %></a>
+        <%= render 'devise/partials/logout' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Home', homepage_index_path %></a>
+        <%= link_to 'Profile', photos_path %>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'Homepage', root_path %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Photos', photos_path %></a>
+        <%= link_to 'Message', inbox_index_path %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Escape!', root_path %></a>
+        <%= link_to 'Escape!', new_escape_path %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'New Escape', new_escape_path %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Inbox', inbox_index_path %></a>
-      </li>
+
     </ul>
 
     <p class="notice"><%= notice %></p>

@@ -1,16 +1,19 @@
+<div class="go-middle">
 <p id="notice"><%= notice %></p>
 
-<h1>Photos</h1>
+<h1>Profile</h1>
 
-  <tbody>
     <% @photos.each do |photo| %>
       <img src="<%= photo.image_url %>">
-
-      <%= link_to 'Show', photo %>
-      <%= link_to 'Edit', edit_photo_path(photo) %>
+      <br>
+      <p> Full Name: <span><%= photo.full_name %></span></p>
+      <br>
+      <%= link_to 'Edit', edit_photo_path(photo) %> |
       <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
 
 <br>
 
-<%= link_to 'New Photo', new_photo_path %>
+<%#= link_to 'New Photo', new_photo_path %>
+
+</div>

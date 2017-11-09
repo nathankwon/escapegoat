@@ -12,18 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :photo_image %>
-  </div>
-
-  <div class="field">
     <%= form.label :caption %>
     <%= form.text_field :caption, id: :photo_caption %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %> -->
 
 <% if user_signed_in? %>

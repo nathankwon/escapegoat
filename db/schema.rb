@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20171109050508) do
   end
 
   create_table "escapes", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.text "rescue_title"
     t.decimal "dollar_amount"
     t.string "location"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20171109050508) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
+    t.index ["user_id"], name: "index_escapes_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 20171109050508) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "escapes", "users"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
   add_foreign_key "photos", "users"

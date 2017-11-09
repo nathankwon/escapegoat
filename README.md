@@ -10,3 +10,4 @@ google maps api: https://developers.google.com/maps/documentation/javascript/add
 stripe: https://stripe.com/docs/checkout/rails
 messaging: https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
 configuring rails paths
+search form: http://www.rymcmahon.com/articles/2

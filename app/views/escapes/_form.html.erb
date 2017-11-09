@@ -1,47 +1,52 @@
-<%= form_with(model: escape, local: true) do |form| %>
-  <% if escape.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(escape.errors.count, "error") %> prohibited this escape from being saved:</h2>
+<div class="go-middle">
+  <%= form_with(model: escape, local: true) do |form| %>
+    <% if escape.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(escape.errors.count, "error") %> prohibited this escape from being saved:</h2>
 
-      <ul>
-      <% escape.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% escape.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>Profile Email: <%= current_user.photo.full_name %></div>
+
+
+    <div class="field">
+      <%= form.label :rescue_title %>
+      <br>
+      <%= form.text_field :rescue_title, id: :escape_rescue_title, :size => 40, :required => 'required' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :location %>
+      <br>
+      <%= form.text_field :location, id: :escape_location, :required => 'required' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :dollar_amount %>
+      <br>
+      <%= form.number_field :dollar_amount, id: :escape_dollar_amount, :step => 0.01, :min => 0.5, :required => 'required' %>
+    </div>
+
+    <div class="field">
+      <%= form.label :description %>
+      <br>
+      <%= form.text_area :description, id: :escape_description, :size => "70x5" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :requirements %>
+      <br>
+      <%= form.text_area :requirements, id: :escape_requirements, :size => "70x5" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :escape_user_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rescue_title %>
-    <%= form.text_field :rescue_title, id: :escape_rescue_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :dollar_amount %>
-    <%= form.number_field :dollar_amount, id: :escape_dollar_amount, :step => 0.01, :min => 0.5 %>
-  </div>
-
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :escape_location %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :escape_description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :requirements %>
-    <%= form.text_area :requirements, id: :escape_requirements %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
