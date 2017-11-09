@@ -68,7 +68,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to photos_url, notice: 'Photo was successfully created.' }
+        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -109,6 +109,6 @@ class PhotosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:image, :user_id, :caption)
+      params.require(:photo).permit(:image, :user_id, :full_name)
     end
 end

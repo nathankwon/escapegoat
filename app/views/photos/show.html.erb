@@ -1,16 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Image data:</strong>
+  <strong>Profile Image:</strong>
   <% if @photo.image_data? %>
   <%= image_tag @photo.image.url %>
   <% end %>
 </p>
 
 <p>
+  <strong>Full name:</strong>
+  <%= @photo.full_name %>
+</p>
+
+<!-- <p>
   <strong>User:</strong>
   <%= @photo.user %>
-</p>
+</p> -->
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
