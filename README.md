@@ -9,3 +9,4 @@ geocoder: https://github.com/alexreisner/geocoder
 google maps api: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#step_3_get_an_api_key
 stripe: https://stripe.com/docs/checkout/rails
 messaging: https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
+configuring rails paths

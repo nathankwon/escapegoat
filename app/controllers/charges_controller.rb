@@ -19,7 +19,6 @@ class ChargesController < ApplicationController
       :customer    => customer.id,
       :amount      => @amount.to_i,
       :description => 'Rails Stripe customer',
-      :capture => false,
       :currency    => 'aud'
     )
 
