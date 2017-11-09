@@ -4,9 +4,9 @@ class EscapesController < ApplicationController
   # GET /escapes
   # GET /escapes.json
   def index
-    # current_user_photos = Photo.where(user_id: current_user.id)
-    # puts "----current_user_photos #{current_user_photos.inspect}"
-    # if current_user_photos.present?
+    current_user_photos = Photo.where(user_id: current_user.id)
+    puts "----current_user_photos #{current_user_photos.inspect}"
+    if current_user_photos.present?
       @escapes = Escape.all
       if params[:search]
         @escapes = Escape.search(params[:search]).order("created_at DESC")
@@ -14,10 +14,10 @@ class EscapesController < ApplicationController
         @escapes = Escape.all.order("created_at DESC")
       end
 
-      # render 'index'
-    # else
-    #   redirect_to new_photo_path
-    # end
+      render 'index'
+    else
+      redirect_to new_photo_path
+    end
   end
 
   # GET /escapes/1

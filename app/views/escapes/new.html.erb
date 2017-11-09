@@ -1,7 +1,11 @@
 <h1 class="go-middle">New Escape</h1>
 
-<%= render 'form', escape: @escape %>
+<% if current_user.photo.present? %>
+  <%= render 'form', escape: @escape %>
+<% else %>
+  <div class="go-middle">Please create a profile first: <%= link_to 'New Profile', new_photo_path %></div>
+<% end %>
 
 <div class="go-middle">
-  <%= link_to 'Back', escapes_path %>
+  <%= link_to 'Cancel', escapes_path %>
 </div>

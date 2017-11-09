@@ -17,30 +17,35 @@
   </div>
 
 <% end %> -->
-
-<% if user_signed_in? %>
-  <div>Signed in as... <%= current_user.email %></div>
-<% end %>
-
-<%= form_for @photo do |f| %>
-  <%= render "shared/errors", object: @photo %>
-
-  <%= f.hidden_field :image, value: @photo.cached_image_data %>
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-
-  <!-- <%= f.label :title %>
-  <%= f.text_field :title %> -->
+<div class="go-middle">
+  <% if user_signed_in? %>
+    <div class="underline">Signed in as <%= current_user.email %></div>
+  <% end %>
   <br>
 
-  <%= f.label :full_name %>
-  <%= f.text_field :full_name %>
+  <%= form_for @photo do |f| %>
+    <%= render "shared/errors", object: @photo %>
 
-  <!-- <% if @photo.image_data? %>
-      <%= image_tag @photo.image_url(:thumb) %>
-      Remove attachment: <%= f.check_box :remove_image %>
-  <% end %> -->
-  <br>
+    <%= f.hidden_field :image, value: @photo.cached_image_data %>
+    <%= f.label :image %>:
+    <br>
+    <%= f.file_field :image, class: "fish" %>
 
-  <%= f.submit %>
-<% end %>
+    <!-- <%= f.label :title %>
+    <%= f.text_field :title %> -->
+    <br>
+    <br>
+
+    <%= f.label :full_name %>
+    <br>
+    <%= f.text_field :full_name, :required => 'required' %>
+    <br>
+    <!-- <% if @photo.image_data? %>
+        <%= image_tag @photo.image_url(:thumb) %>
+        Remove attachment: <%= f.check_box :remove_image %>
+    <% end %> -->
+    <br>
+
+    <%= f.submit "I love Takuya" %>
+  <% end %>
+</div>

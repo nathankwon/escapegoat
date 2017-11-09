@@ -1,12 +1,12 @@
 <div class="go-right">
   <%= form_tag(escapes_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+      <%= text_field_tag :search, params[:search], placeholder: "Search Escapes" %>
       <%= submit_tag "Search", :name => nil %>
   <% end %>
 </div>
 
 <% if @escapes.blank? %>
-  <h4>There are no recipes containing the term <%= params[:search] %>.</h4>
+  <h4>There are no Escapes containing the term <%= params[:search] %>.</h4>
 <% end %>
 
 <% @escapes.each do |escape| %>
@@ -22,8 +22,7 @@
         <p class="card-text"><%= escape.description %></p>
         <h6>Requirements</h6>
         <p class="card-text"><%= escape.requirements %></p>
-        <a href="#" class="card-link"><%= link_to 'Show', escape %> | </a>
-        <a href="#" class="card-link"><%= link_to 'Edit', edit_escape_path(escape) %> </a>
+        <a href="#" class="card-link"><%= link_to 'Show', escape %> </a>
       </div>
     </div>
     <br>

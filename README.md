@@ -1,3 +1,23 @@
+# Project Overview
+### Tech Stack
+Rails,
+### Set-up Prerequisites
+figaro(env) heroku
+### Gem Requirements
+### Business Problem
+SCIPAB
+### Solution
+-----
+# Planning
+### User Stories
+### Wireframes
+### User Flow
+### ERD
+## Style Guide
+css, color, font
+
+-----
+# Build Process
 rails new escapegoat --database=postgresql
 add bootstrap: https://github.com/twbs/bootstrap-rubygem
 rails g scaffold Profile image:text user_id:integer first_name:text last_name:text email:text

@@ -6,5 +6,6 @@ class User < ApplicationRecord
 
   has_one :photo
   has_many :messages
+  has_many :escapes
   has_many :conversations, foreign_key: :sender_id
 end

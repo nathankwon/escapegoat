@@ -1,3 +1,4 @@
+<div class="go-middle">
   <strong>User:</strong>
   <%= @escape.user.photo.full_name %>
   <br>
@@ -22,11 +23,17 @@
   <%= @escape.requirements %>
   <br>
 
-<div id="map" class="maps"></div>
+<br>
+<div id="map" class="maps container"></div>
+<br>
 
-<%= link_to 'Messsage Escapee', inbox_index_path %> |
-<%= link_to 'Pay', new_escape_charge_path(@escape) %> (only the poster should see this) |
-<%= link_to "Delete", @escape, :method => :delete, data: { confirm: 'Are you sure?' } %> (and this)
+<% if current_user == @escape.user %>
+  <%= link_to 'Pay', new_escape_charge_path(@escape) %> |
+  <%= link_to 'Edit', edit_escape_path(@escape) %> |
+  <%= link_to "Delete", @escape, :method => :delete, data: { confirm: 'Are you sure?' } %>
+<% else %>
+  <%= link_to 'Messsage Poster', inbox_index_path %>
+<% end %>
 
 
 <script async defer
@@ -50,3 +57,4 @@
       google.maps.event.addDomListener(window, 'load', initialize);
 
   </script>
+</div>
