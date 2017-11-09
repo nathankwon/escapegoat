@@ -18,4 +18,5 @@
 </p> -->
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= link_to 'Back', photos_path %> |
+<%= link_to "Delete", @photo, :method => :delete, data: { confirm: 'Are you sure?' } %>

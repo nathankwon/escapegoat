@@ -7,7 +7,7 @@
   <br>
 
   <strong>Dollar amount:</strong>
-  <%= @escape.dollar_amount %>
+  $<%= @escape.dollar_amount %>
   <br>
 
   <strong>Location:</strong>
@@ -24,8 +24,8 @@
 
 <div id="map" class="maps"></div>
 
-<%= link_to 'Back', escapes_path %> |
-<%= link_to 'Accept and Pay', new_charge_path %> |
+<%= link_to 'Messaging', inbox_index_path %> |
+<%= link_to 'Pay', new_escape_charge_path(@escape) %> (only the poster should see this) |
 
 
 <script async defer

@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :dollar_amount %>
-    <%= form.number_field :dollar_amount, id: :escape_dollar_amount, :step => 0.01 %>
+    <%= form.number_field :dollar_amount, id: :escape_dollar_amount, :step => 0.01, :min => 0.5 %>
   </div>
 
   <div class="field">

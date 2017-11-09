@@ -10,6 +10,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -29,9 +30,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><%= link_to 'New Escape', new_escape_path %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Charges', new_charge_path %></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#"><%= link_to 'Inbox', inbox_index_path %></a>

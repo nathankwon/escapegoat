@@ -2,11 +2,13 @@ Rails.application.routes.draw do
 
   get 'inbox/index'
 
-  resources :escapes
+  resources :escapes do
+    resources :charges, only: [:new, :create]
+  end
   resources :photos
   devise_for :users
   resources :users, only: [:show, :index], controller: :profiles
-  resources :charges
+
 
   resources :conversations, only: [:create] do
     member do

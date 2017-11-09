@@ -39,15 +39,16 @@
 
   <!-- <%= f.label :title %>
   <%= f.text_field :title %> -->
+  <br>
 
   <%= f.label :full_name %>
   <%= f.text_field :full_name %>
 
-  <% if @photo.image_data? %>
+  <!-- <% if @photo.image_data? %>
       <%= image_tag @photo.image_url(:thumb) %>
       Remove attachment: <%= f.check_box :remove_image %>
-  <% end %>
-
+  <% end %> -->
+  <br>
 
   <%= f.submit %>
 <% end %>
