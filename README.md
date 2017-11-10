@@ -20,7 +20,6 @@ css, color, font
 # Build Process
 rails new escapegoat --database=postgresql
 add bootstrap: https://github.com/twbs/bootstrap-rubygem
-rails g scaffold Profile image:text user_id:integer first_name:text last_name:text email:text
 add devise: https://github.com/plataformatec/devise
 add shrine: https://github.com/janko-m/shrine --> using this guide: https://code.tutsplus.com/tutorials/uploading-files-with-rails-and-shrine--cms-27596
 figaro: https://github.com/laserlemon/figaro
@@ -31,3 +30,7 @@ stripe: https://stripe.com/docs/checkout/rails
 messaging: https://www.nopio.com/blog/rails-real-time-chat-application-part-1/
 configuring rails paths
 search form: http://www.rymcmahon.com/articles/2
+### Problems
+hard to plan cos am noob
+postgresql
+filename stucture, profile is call photo...escape is called homepage..
